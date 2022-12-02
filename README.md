@@ -2,6 +2,14 @@
 
 ### In order to run Open Hospital Telemetry
 
+You can just run
+
+```
+docker-compose up
+```
+
+Or
+
  Run Postgres.
 
  ```
