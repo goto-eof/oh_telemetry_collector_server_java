@@ -8,6 +8,8 @@ You can just run
 docker-compose up
 ```
 
+and then test application with Postman (remember to import postman.json)
+
 Or
 
  Run Postgres.
