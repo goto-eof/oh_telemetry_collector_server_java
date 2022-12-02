@@ -1,4 +1,4 @@
-# POC | Open Hospital Telemetry Collector
+# POC | Open Hospital - Telemetry Collector (Java)
 See also [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust) (has the same features, but it was developed in Rust).
 
 ### In order to run Open Hospital Telemetry
