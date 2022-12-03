@@ -9,7 +9,7 @@ You can just run
 docker-compose up
 ```
 
-and then test application with Postman (remember to import postman.json)
+and then test application with Postman (remember to import postman.json) by making a post to the port 8015
 
 Or
 
