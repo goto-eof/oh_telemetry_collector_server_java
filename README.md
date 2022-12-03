@@ -9,7 +9,7 @@ You can just run
 docker-compose up
 ```
 
-and then test application with Postman (remember to import postman.json) by making a post to the port 8015
+and then test application with Postman (remember to import postman.json)
 
 Or
 
@@ -26,7 +26,7 @@ Or
 ### DB connection
 
 ```
-postgres://127.0.0.1:5432/postgres
+postgres://127.0.0.1:5433/postgres
 username: postgres
 password: postgres
 ```
