@@ -17,7 +17,7 @@ USER nonroot:nonroot
 
 COPY --from=MAVEN_TOOL_CHAIN_CACHE --chown=nonroot:nonroot /tmp/target/oh-telemetry-collector-server.jar /oh-telemetry-collector-server.jar
 
-EXPOSE 8013
+EXPOSE 8015
 
 ENV _JAVA_OPTIONS "-XX:MinRAMPercentage=60.0 -XX:MaxRAMPercentage=90.0 \
 -Djava.security.egd=file:/dev/./urandom \
