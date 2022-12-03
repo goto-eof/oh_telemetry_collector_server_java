@@ -13,3 +13,4 @@ services:
     restart: on-failure
     networks:
       - default
+    command: -p 5433
