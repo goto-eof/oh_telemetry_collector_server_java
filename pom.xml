@@ -8,7 +8,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 	<groupId>org.isf</groupId>
-	<artifactId>telemetry</artifactId>
+	<artifactId>oh_telemetry_collector_server</artifactId>
 	<version>0.0.1</version>
 	<name>oh-telemetry-collector-server</name>
 	<description>Telemetry server</description>
