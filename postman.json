@@ -1,38 +1,10 @@
 {
 	"info": {
 		"_postman_id": "1d8f7869-625b-48c3-942f-c95f375bcfa6",
-		"name": "OH Telemetry Collector Server Rust",
+		"name": "OH Telemetry Collector Server Java",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "Rust",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"data\": [\n                {\"code\": \"FUN_HW\", \"key\": \"hw_cpu_number_physical\", \"value\": \"8\"},\n                {\"code\": \"FUN_HW\", \"key\": \"hw_cpu_number_logical\", \"value\": \"16\"},\n                {\"code\": \"FUN_HW\", \"key\": \"hw_ram_capacity\", \"value\": \"32\"},\n                {\"code\": \"FUN_HW\", \"key\": \"hw_screen_size\", \"value\": null}\n            ]\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8013/telemetry",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8013",
-					"path": [
-						"telemetry"
-					]
-				}
-			},
-			"response": []
-		},
 		{
 			"name": "Java",
 			"request": {
@@ -53,7 +25,7 @@
 					"host": [
 						"localhost"
 					],
-					"port": "8013",
+					"port": "8015",
 					"path": [
 						"telemetry"
 					]
