@@ -28,5 +28,6 @@ services:
     healthcheck:
       test: pg_isready -U postgres
     restart: on-failure
+    command: -p 5433
     networks:
       - default
