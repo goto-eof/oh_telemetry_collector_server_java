@@ -3,6 +3,9 @@ See also [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_tel
 
 [Here](https://openhospital.atlassian.net/browse/OP-952) is the Jira ticket.
 
+
+![stack](stack.png)
+
 ### In order to run Open Hospital Telemetry
 
 You can just run
