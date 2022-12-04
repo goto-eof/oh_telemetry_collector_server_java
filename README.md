@@ -4,7 +4,7 @@ See also [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_tel
 [Here](https://openhospital.atlassian.net/browse/OP-952) is the Jira ticket.
 
 <p align="center" width="100%">
-    <img width="50%" src="dev-stack.png"> 
+    <img width="50%" src="dev-stack2.png"> 
 </p>
 
 ### In order to run Open Hospital Telemetry
