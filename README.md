@@ -1,6 +1,8 @@
 # POC | Open Hospital - Telemetry Collector (Java)
 See also [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust) (has the same features, but it was developed in Rust) and [oh_telemetry_collector_test_load](https://github.com/goto-eof/oh_telemetry_collector_load_test).
 
+[Here](https://openhospital.atlassian.net/browse/OP-952) is the Jira ticket.
+
 ### In order to run Open Hospital Telemetry
 
 You can just run
