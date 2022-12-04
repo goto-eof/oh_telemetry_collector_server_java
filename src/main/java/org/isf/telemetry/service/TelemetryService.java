@@ -1,16 +1,18 @@
 package org.isf.telemetry.service;
 
+import java.util.Optional;
+
 import org.isf.telemetry.converter.TelemetryConverter;
 import org.isf.telemetry.dao.TelemetryDao;
-import org.isf.telemetry.dto.KeyValue;
 import org.isf.telemetry.dto.TelemetryGenericResponse;
 import org.isf.telemetry.dto.TelemetryInsertRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional
+@Transactional(propagation = Propagation.REQUIRED)
 public class TelemetryService {
 
 	@Autowired
@@ -20,20 +22,11 @@ public class TelemetryService {
 	private TelemetryConverter telemetryConverter;
 
 	public TelemetryGenericResponse<Boolean> storeData(TelemetryInsertRequest telemetryInsertRequest) {
-
-		Integer generatedValue = this.telemetryDao.retrieveNextRequestId();
-		if (generatedValue == null) {
-			generatedValue = 0;
-		}
-
-		for (KeyValue key : telemetryInsertRequest.getData()) {
-			this.telemetryDao.save(this.telemetryConverter.toBo(key, generatedValue));
-		}
-
-		TelemetryGenericResponse<Boolean> result = new TelemetryGenericResponse<Boolean>();
-		result.setResult(true);
-		result.setSuccess(true);
-		return result;
+		final int generatedValue = Optional.ofNullable(this.telemetryDao.retrieveNextRequestId()).orElse(0);
+		telemetryInsertRequest.getData().forEach(item -> {
+			this.telemetryDao.save(this.telemetryConverter.toBo(item, generatedValue));
+		});
+		return  new TelemetryGenericResponse<Boolean>(true, true);
 	}
 
 }

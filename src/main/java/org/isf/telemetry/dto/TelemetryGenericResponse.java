@@ -6,6 +6,11 @@ public class TelemetryGenericResponse<T> {
 	private boolean success;
 	private T result;
 
+	public TelemetryGenericResponse(boolean success, T result){
+		this.success = success;
+		this.result = result;
+	}
+
 	public boolean isSuccess() {
 		return success;
 	}
