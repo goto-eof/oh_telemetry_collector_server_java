@@ -9,7 +9,7 @@ You can just run
 docker-compose up
 ```
 
-and then test application with Postman (remember to import postman.json)
+and then test application with Postman (remember to import postman.json).
 
 Or
 
@@ -23,7 +23,19 @@ Or
 
  Import in Postman the postam.json collection and make the Post request.
 
+### Server
+
+The server responds to the following URL (POST):
+
+```
+http://localhost:8015/telemetry
+```
+
 ### DB connection
+
+
+You can check stored data using the following credentials:
+
 
 ```
 postgres://127.0.0.1:5433/postgres
