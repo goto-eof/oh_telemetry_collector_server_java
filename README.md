@@ -32,14 +32,14 @@ Import postman.json
 ### The server responds on
 
 ```
-http://localhost:8015/collect
+http://localhost:8013/collect
 ```
 
 
 ### DB connection
 
 ```
-postgres://127.0.0.1:5435/postgres
+postgres://127.0.0.1:5433/postgres
 username: postgres
 password: postgres
 ```
