@@ -1,4 +1,4 @@
-#### Telemetry Collector Server (TypeScript) (WIP)
+#### Telemetry Collector Server (Java)
 
 It is one of the three applications on which will be carried out performance tests in order to determine which are the most performing technologies. This is the Java version. 
 
