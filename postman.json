@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"data\": [\n                {\"code\": \"FUN_HW\", \"key\": \"hw_cpu_number_physical\", \"value\": \"8\"},\n                {\"code\": \"FUN_HW\", \"key\": \"hw_cpu_number_logical\", \"value\": \"16\"},\n                {\"code\": \"FUN_HW\", \"key\": \"hw_ram_capacity\", \"value\": \"32\"},\n                {\"code\": \"FUN_HW\", \"key\": \"hw_screen_size\", \"value\": null}\n            ]\n}",
+					"raw": "{\n    \"FUN_HW\": {\n        \"hw_mem_total_memory\": \"2 GiB\",\n        \"hw_cpu_number_physical_processes\": \"8\",\n        \"hw_cpu_microarchitecture\": \"ARM64\",\n        \"hw_cpu_vendor\": \"Apple Inc.\",\n        \"hw_cpu_context_switches\": \"0\",\n        \"hw_cpu_idientifier\": \"Apple Inc.001\",\n        \"hw_cpu_model\": \"0\",\n        \"hw_cpu_number_logical_processes\": \"8\",\n        \"hw_cpu_name\": \"Apple M1 Pro\"\n    },\n    \"FUN_OH\": {\n        \"oh_active_users\": \"2\",\n        \"loc_timezone\": \"Europe/Rome\",\n        \"app_version\": \"1.11.4\",\n        \"loc_zip_code\": \"\",\n        \"time_last_used\": \"2022-12-05T01:50:23.346896\",\n        \"oh_active_wards\": \"4\",\n        \"oh_active_beds\": \"80\",\n        \"loc_region_name\": \"Lombardy\",\n        \"oh_active_patients\": \"0\",\n        \"loc_country_name\": \"Italy\",\n        \"loc_country_code\": \"IT\",\n        \"currency_code\": \"EUR\",\n        \"loc_city\": \"Madagascar\"\n    },\n    \"FUN_SW\": {\n        \"os_bitness\": \"64\",\n        \"os_version\": \"99.0\",\n        \"dbms_product_name\": \"MySQL\",\n        \"dbms_product_version\": \"Maria\",\n        \"os_family\": \"macOS\",\n        \"os_manufacturer\": \"Apple\",\n        \"dbms_driver_name\": \"MySQL Connector/J\",\n        \"dbms_driver_version\": \"mysql-connector-java\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,14 +20,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8013/telemetry",
+					"raw": "http://localhost:8015/collect",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8015",
 					"path": [
-						"telemetry"
+						"collect"
 					]
 				}
 			},

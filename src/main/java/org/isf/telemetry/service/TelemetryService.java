@@ -1,11 +1,11 @@
 package org.isf.telemetry.service;
 
+import java.util.Map;
 import java.util.Optional;
 
 import org.isf.telemetry.converter.TelemetryConverter;
 import org.isf.telemetry.dao.TelemetryDao;
 import org.isf.telemetry.dto.TelemetryGenericResponse;
-import org.isf.telemetry.dto.TelemetryInsertRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -21,12 +21,17 @@ public class TelemetryService {
 	@Autowired
 	private TelemetryConverter telemetryConverter;
 
-	public TelemetryGenericResponse<Boolean> storeData(TelemetryInsertRequest telemetryInsertRequest) {
+	public TelemetryGenericResponse<Boolean> storeData(Map<String, Map<String, String>> telemetryInsertRequest) {
 		final int generatedValue = Optional.ofNullable(this.telemetryDao.retrieveNextRequestId()).orElse(0);
-		telemetryInsertRequest.getData().forEach(item -> {
-			this.telemetryDao.save(this.telemetryConverter.toBo(item, generatedValue));
+
+		telemetryInsertRequest.forEach((code, map) -> {
+			map.forEach((key, value) -> {
+				this.telemetryDao.save(this.telemetryConverter.toBo(code, key, value, generatedValue));
+			});
+
 		});
-		return  new TelemetryGenericResponse<Boolean>(true, true);
+
+		return new TelemetryGenericResponse<Boolean>(true, true);
 	}
 
 }
