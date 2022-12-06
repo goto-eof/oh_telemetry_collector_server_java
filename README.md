@@ -1,50 +1,45 @@
-# POC | Open Hospital - Telemetry Collector (Java)
-See also [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust) and [oh_telemetry_collector_test_load](https://github.com/goto-eof/oh_telemetry_collector_load_test).
+#### Telemetry Collector Server (TypeScript) (WIP)
 
-[Here](https://openhospital.atlassian.net/browse/OP-952) is the Jira ticket.
+It is one of the three applications on which will be carried out performance tests in order to determine which are the most performing technologies. This is the Java version. 
 
 <p align="center" width="100%">
-    <img width="50%" src="dev-stack2.png"> 
+    <img width="50%" src="dev-stack.png"> 
 </p>
 
-### In order to run Open Hospital Telemetry
+See also:
 
-You can just run
+- [oh_telemetry_collector_load_test](https://github.com/goto-eof/oh_telemetry_collector_load_test)
+- [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
+- [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
+- [oh_telemetry_collector_server_ts](https://github.com/goto-eof/oh_telemetry_collector_server_ts)
 
-```
+### Run 
+
+```bash
 docker-compose up
 ```
 
-and then test application with Postman (remember to import postman.json).
+### Run only DBMS
 
-Or
+```bash
+docker-compose -f docker-compose-dbms.yml up
+```
 
- Run Postgres.
+### Use postman collection for making requests
 
- ```
- docker-compose -f docker-compose-dbms.yml up
- ```
+Import postman.json
 
- And then run as Spring Boot application from Eclipse;
-
- Import in Postman the postam.json collection and make the Post request.
-
-### Server
-
-The server responds to the following URL (POST):
+### The server responds on
 
 ```
-http://localhost:8015/telemetry
+http://localhost:8015/collect
 ```
+
 
 ### DB connection
 
-
-You can check stored data using the following credentials:
-
-
 ```
-postgres://127.0.0.1:5433/postgres
+postgres://127.0.0.1:5435/postgres
 username: postgres
 password: postgres
 ```
