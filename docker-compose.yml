@@ -18,7 +18,7 @@ services:
       - default
   postgres-service:
     container_name: postgres_service_java
-    image: postgres:latest
+    image: postgres:15.1
     ports:
       - '5433:5433'
     environment:
