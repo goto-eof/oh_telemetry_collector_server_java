@@ -1,4 +1,4 @@
-#### Telemetry Collector Server (TypeScript) (WIP)
+#### Telemetry Collector Server (Java)
 
 It is one of the three applications on which will be carried out performance tests in order to determine which are the most performing technologies. This is the Java version. 
 
@@ -32,14 +32,14 @@ Import postman.json
 ### The server responds on
 
 ```
-http://localhost:8015/collect
+http://localhost:8013/collect
 ```
 
 
 ### DB connection
 
 ```
-postgres://127.0.0.1:5435/postgres
+postgres://127.0.0.1:5433/postgres
 username: postgres
 password: postgres
 ```
