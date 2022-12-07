@@ -1,6 +1,7 @@
 
 package org.isf.telemetry.bo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class TelemetryBo {
 	private Integer id;
 	private Integer requestId;
 	private String code;
+	 @Column(name = "property")
 	private String key;
 	private String value;
 
