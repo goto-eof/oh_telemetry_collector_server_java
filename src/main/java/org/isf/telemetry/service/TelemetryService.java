@@ -22,7 +22,7 @@ public class TelemetryService {
 	private TelemetryConverter telemetryConverter;
 
 	public TelemetryGenericResponse<Boolean> storeData(Map<String, Map<String, String>> telemetryInsertRequest) {
-		final int generatedValue = Optional.ofNullable(this.telemetryDao.retrieveNextRequestId()).orElse(0);
+		final int generatedValue = Optional.ofNullable(this.telemetryDao.retrieveNextRequestId()).orElse(0) + 1;
 
 		telemetryInsertRequest.forEach((code, map) -> {
 			map.forEach((key, value) -> {
