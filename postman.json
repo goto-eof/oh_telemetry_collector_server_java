@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Java",
+			"name": "collect",
 			"request": {
 				"method": "POST",
 				"header": [],
