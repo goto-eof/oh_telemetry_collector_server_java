@@ -48,8 +48,8 @@ public class TelemetryService {
 		return new TelemetryGenericResponse<Boolean>(true, true);
 	}
 
-	public List<KeyValue> retrieveComputersAndRam() {
-		return this.telemetryDao.countAndRetrieve(env.getProperty(KEY_TOTAL_MEMORY), env.getProperty(KEY_CPU_ID));
+	public TelemetryGenericResponse<List<KeyValue>> retrieveComputersAndRam() {
+		return  new TelemetryGenericResponse<List<KeyValue>>(true,this.telemetryDao.countAndRetrieve(env.getProperty(KEY_TOTAL_MEMORY), env.getProperty(KEY_CPU_ID)));
 	}
 
 }

@@ -26,7 +26,7 @@ public class TelemetryController {
 
 
 	@GetMapping("/num-comp-ram")
-	public ResponseEntity<List<KeyValue>> retrieveComputersAndRam() {
+	public ResponseEntity<TelemetryGenericResponse<List<KeyValue>>> retrieveComputersAndRam() {
 		return  ResponseEntity.ok(this.telemetryservice.retrieveComputersAndRam());
 	}
 
