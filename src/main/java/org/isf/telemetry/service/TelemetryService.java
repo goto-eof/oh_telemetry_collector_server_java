@@ -35,6 +35,11 @@ public class TelemetryService {
 	@Autowired
 	private TelemetryConverter telemetryConverter;
 
+	public TelemetryGenericResponse<Boolean> deleteAll() {
+		this.telemetryDao.deleteAll();
+		return new TelemetryGenericResponse<Boolean>(true, true);
+	}
+
 	public TelemetryGenericResponse<Boolean> storeData(Map<String, Map<String, String>> telemetryInsertRequest) {
 		final int generatedValue = Optional.ofNullable(this.telemetryDao.retrieveNextRequestId()).orElse(0) + 1;
 
@@ -49,7 +54,8 @@ public class TelemetryService {
 	}
 
 	public TelemetryGenericResponse<List<KeyValue>> retrieveComputersAndRam() {
-		return  new TelemetryGenericResponse<List<KeyValue>>(true,this.telemetryDao.countAndRetrieve(env.getProperty(KEY_TOTAL_MEMORY), env.getProperty(KEY_CPU_ID)));
+		return new TelemetryGenericResponse<List<KeyValue>>(true,
+						this.telemetryDao.countAndRetrieve(env.getProperty(KEY_TOTAL_MEMORY), env.getProperty(KEY_CPU_ID)));
 	}
 
 }

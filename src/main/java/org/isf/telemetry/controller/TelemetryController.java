@@ -8,6 +8,7 @@ import org.isf.telemetry.dto.TelemetryGenericResponse;
 import org.isf.telemetry.service.TelemetryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,6 +29,11 @@ public class TelemetryController {
 	@GetMapping("/num-comp-ram")
 	public ResponseEntity<TelemetryGenericResponse<List<KeyValue>>> retrieveComputersAndRam() {
 		return  ResponseEntity.ok(this.telemetryservice.retrieveComputersAndRam());
+	}
+
+	@DeleteMapping("/delete-all")
+	public ResponseEntity<TelemetryGenericResponse<Boolean>> deleteAll() {
+		return  ResponseEntity.ok(this.telemetryservice.deleteAll());
 	}
 
 }
